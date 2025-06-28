@@ -13,3 +13,5 @@ class Quiz:
 
     def add_question(self, question):
         self.questions.append(question)
+
+    def save(self):
