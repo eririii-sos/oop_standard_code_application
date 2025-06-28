@@ -5,3 +5,6 @@ class Question:
         self.text = text
         self.options = options
         self.correct = correct
+
+class Quiz:
+    def __init__(self):
