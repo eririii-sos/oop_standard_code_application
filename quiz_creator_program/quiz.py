@@ -10,3 +10,6 @@ class Quiz:
     def __init__(self, filename):
         self.filename = filename
         self.questions = []
+
+    def add_question(self, question):
+        self.questions.append(question)
