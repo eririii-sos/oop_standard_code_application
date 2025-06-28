@@ -1,4 +1,7 @@
 # Will contain quiz creator's data classes (Question, Quiz, etc.)
 
 class Question:
-    def __init__(self):
+    def __init__(self, text, options, correct):
+        self.text = text
+        self.options = options
+        self.correct = correct
