@@ -7,4 +7,5 @@ class Question:
         self.correct = correct
 
 class Quiz:
-    def __init__(self):
+    def __init__(self, filename):
+        self.filename = filename
