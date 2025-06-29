@@ -15,3 +15,4 @@ class Question:
         lines = [f"Question: {self.text}"]
         for key, val in self.options.items():
             lines.append(f" {key}) {val}")
+        lines.append(f"Correct Answer: {self.correct}")
