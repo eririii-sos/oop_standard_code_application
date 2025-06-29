@@ -31,3 +31,8 @@ class Quiz:
         with open(self.filename, "a") as file:
             for question in self.questions:
                 file.write(question.format_for_file() + "\n")
+
+class UI:
+    @staticmethod
+    def clear_screen():
+        os.system("cls" if os.name == "nt" else "clear")
