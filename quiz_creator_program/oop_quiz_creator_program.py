@@ -51,3 +51,7 @@ class UI:
             f"Press {Fore.RED}{Style.BRIGHT}2{Fore.RESET} to {Fore.RED}{Style.BRIGHT}EXIT{Fore.RESET}" + " " * 16 + "|")
         print("|" + " " * 48 + "|")
         print("=" * 50)
+
+    @staticmethod
+    def prompt(text, color=Fore.YELLOW):
+        return input(color + text + Fore.RESET)
