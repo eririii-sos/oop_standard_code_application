@@ -85,7 +85,11 @@ def main():
         for key in ['a', 'b', 'c', 'd']:
             options[key] = UI.prompt(f"Option {key}: ")
 
-        quiz.add_question(Question(question_text, options))
+        correct = ""
+        while correct not in options:
+            correct = UI.prompt("\nCorrect answer (a/b/c/d): ").lower()
+
+        quiz.add_question(Question(question_text, options, correct))
 
 if __name__ == "__main__":
     main()
