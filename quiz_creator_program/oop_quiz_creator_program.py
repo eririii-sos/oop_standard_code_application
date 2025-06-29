@@ -20,5 +20,6 @@ class Question:
         return "\n".join(lines)
 
 class Quiz:
-    def __init__(self):
-        pass
+    def __init__(self, filename):
+        self.filename = filename
+        self.questions = []
