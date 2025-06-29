@@ -63,3 +63,6 @@ class UI:
     @staticmethod
     def highlight(message):
         print(Back.YELLOW + Fore.BLACK + Style.BRIGHT + message)
+
+def main():
+    UI.banner()
