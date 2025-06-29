@@ -59,3 +59,7 @@ class UI:
     @staticmethod
     def error(message):
         print(Fore.RED + message)
+
+    @staticmethod
+    def highlight(message):
+        print(Back.YELLOW + Fore.BLACK + Style.BRIGHT + message)
