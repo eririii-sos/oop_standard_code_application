@@ -6,5 +6,7 @@ from colorama import init, Fore, Style, Back
 init(autoreset=True)
 
 class Question:
-    def __init__(self):
-        pass
+    def __init__(self, text, options, correct):
+        self.text = text
+        self.options = options
+        self.correct = correct
