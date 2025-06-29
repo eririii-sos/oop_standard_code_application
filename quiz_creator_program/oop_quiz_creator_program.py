@@ -88,7 +88,9 @@ def main():
         correct = ""
         while correct not in options:
             correct = UI.prompt("\nCorrect answer (a/b/c/d): ").lower()
-
+            if correct not in options:
+                UI.error("Invalid input! Please only enter a, b, c, or d.")
+                
         quiz.add_question(Question(question_text, options, correct))
 
 if __name__ == "__main__":
