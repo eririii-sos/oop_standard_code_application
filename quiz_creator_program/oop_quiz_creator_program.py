@@ -98,6 +98,7 @@ def main():
             break
 
         quiz.save()
+        print(f"\n 🎉 All done! Your questions are saved in '{filename}'")
 
 if __name__ == "__main__":
     main()
