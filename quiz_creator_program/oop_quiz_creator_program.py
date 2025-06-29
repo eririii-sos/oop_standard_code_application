@@ -66,6 +66,8 @@ class UI:
 
 def main():
     UI.banner()
+    filename = "quiz_creator_questions.txt"
+    
 
 if __name__ == "__main__":
     main()
