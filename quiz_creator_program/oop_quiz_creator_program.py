@@ -4,3 +4,7 @@ from colorama import init, Fore, Style, Back
 
 # Initialize colorama
 init(autoreset=True)
+
+class Question:
+    def __init__(self):
+        pass
