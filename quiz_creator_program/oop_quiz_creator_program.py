@@ -26,3 +26,8 @@ class Quiz:
 
     def add_question(self, question):
         self.questions.append(question)
+
+    def save(self):
+        with open(self.filename, "a") as file:
+            for question in self.questions:
+                file.write(question.format_for_file() + "\n")
