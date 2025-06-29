@@ -66,3 +66,6 @@ class UI:
 
 def main():
     UI.banner()
+
+if __name__ == "__main__":
+    main()
