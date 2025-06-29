@@ -90,8 +90,12 @@ def main():
             correct = UI.prompt("\nCorrect answer (a/b/c/d): ").lower()
             if correct not in options:
                 UI.error("Invalid input! Please only enter a, b, c, or d.")
-                
+
         quiz.add_question(Question(question_text, options, correct))
+
+        again = UI.prompt("\nAdd another question? (yes/no): ").strip().lower()
+        if again != "yes":
+            break
 
 if __name__ == "__main__":
     main()
