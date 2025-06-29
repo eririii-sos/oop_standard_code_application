@@ -16,3 +16,5 @@ class Question:
         for key, val in self.options.items():
             lines.append(f" {key}) {val}")
         lines.append(f"Correct Answer: {self.correct}")
+        lines.append("-" * 50)
+        return "\n".join(lines)
