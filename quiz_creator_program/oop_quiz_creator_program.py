@@ -75,5 +75,7 @@ def main():
     
     print("\nStarting the program...")
 
+    quiz = Quiz(filename)
+
 if __name__ == "__main__":
     main()
