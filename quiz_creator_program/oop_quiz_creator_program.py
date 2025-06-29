@@ -40,3 +40,14 @@ class UI:
     @staticmethod
     def banner():
         UI.clear_screen()
+        print("=" * 50)
+        print("|" + " " * 48 + "|")
+        print("|" + " " * 8 +
+            f"{Fore.YELLOW}{Style.BRIGHT}🧠 WELCOME TO THE QUIZ CREATOR 🧠{Fore.RESET}" + " " * 7 + "|")
+        print("|" + " " * 48 + "|")
+        print("|" + " " * 17 +
+            f"Press {Fore.GREEN}{Style.BRIGHT}1{Fore.RESET} to {Fore.GREEN}{Style.BRIGHT}START{Fore.RESET}" + " " * 15 + "|")
+        print("|" + " " * 17 +
+            f"Press {Fore.RED}{Style.BRIGHT}2{Fore.RESET} to {Fore.RED}{Style.BRIGHT}EXIT{Fore.RESET}" + " " * 16 + "|")
+        print("|" + " " * 48 + "|")
+        print("=" * 50)
