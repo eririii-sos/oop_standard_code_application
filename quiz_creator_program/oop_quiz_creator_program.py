@@ -67,7 +67,13 @@ class UI:
 def main():
     UI.banner()
     filename = "quiz_creator_questions.txt"
+
+    choice = UI.prompt("\nSelect an option: ").strip()
+    if choice != "1":
+        print("\nExiting the program... Goodbye!")
+        return
     
+    print("\nStarting the program...")
 
 if __name__ == "__main__":
     main()
