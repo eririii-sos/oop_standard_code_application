@@ -10,3 +10,8 @@ class Question:
         self.text = text
         self.options = options
         self.correct = correct
+
+    def format_file(self):
+        lines = [f"Question: {self.text}"]
+        for key, val in self.options.items():
+            lines.append(f" {key}) {val}")
