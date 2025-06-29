@@ -79,6 +79,9 @@ def main():
 
     while True:
         UI.highlight("\nAdd a new question")
+        question_text = UI.prompt("Question: ")
+
+        quiz.add_question(Question(question_text))
 
 if __name__ == "__main__":
     main()
