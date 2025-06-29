@@ -18,3 +18,7 @@ class Question:
         lines.append(f"Correct Answer: {self.correct}")
         lines.append("-" * 50)
         return "\n".join(lines)
+
+class Quiz:
+    def __init__(self):
+        pass
