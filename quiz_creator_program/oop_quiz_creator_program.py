@@ -77,5 +77,8 @@ def main():
 
     quiz = Quiz(filename)
 
+    while True:
+        UI.highlight("\nAdd a new question")
+
 if __name__ == "__main__":
     main()
