@@ -55,3 +55,7 @@ class UI:
     @staticmethod
     def prompt(text, color=Fore.YELLOW):
         return input(color + text + Fore.RESET)
+
+    @staticmethod
+    def error(message):
+        print(Fore.RED + message)
