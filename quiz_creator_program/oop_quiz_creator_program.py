@@ -81,7 +81,11 @@ def main():
         UI.highlight("\nAdd a new question")
         question_text = UI.prompt("Question: ")
 
-        quiz.add_question(Question(question_text))
+        options = {}
+        for key in ['a', 'b', 'c', 'd']:
+            options[key] = UI.prompt(f"Option {key}: ")
+
+        quiz.add_question(Question(question_text, options))
 
 if __name__ == "__main__":
     main()
