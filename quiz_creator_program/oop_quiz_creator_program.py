@@ -97,5 +97,7 @@ def main():
         if again != "yes":
             break
 
+        quiz.save()
+
 if __name__ == "__main__":
     main()
