@@ -1,0 +1,17 @@
+quiz_game/
+│
+├── main.py
+├── settings.py
+├── assets/
+│   └── (images, sounds, etc.)
+├── core/
+│   ├── game.py
+│   ├── scene_manager.py
+│   ├── music.py
+│   └── utils.py
+└── scenes/
+    ├── menu_scene.py
+    ├── hallway_scene.py
+    ├── quiz_scene.py
+    ├── result_scene.py
+    └── developer_info_screen.py
