@@ -1,7 +1,7 @@
 # scenes/hallway_scene.py
 
 import pygame
-from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE
+from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE, TEXT_SPEED
 
 class HallwayScene:
     def __init__(self, game):
@@ -61,6 +61,16 @@ class HallwayScene:
         self.typed_text = ""
         self.char_index = 0
         self.text_timer = 0
+
+    def update(self, dt):
+        if self.current_line < len(self.dialogue):
+            line = self.dialogue[self.current_line]
+            if self.char_index < len(line):
+                self.text_timer += dt
+                if self.text_timer >= TEXT_SPEED:
+                    self.typed_text += line[self.char_index]
+                    self.char_index += 1
+                    self.text_timer = 0
 
     def render(self):
         self.screen.blit(self.background, (0, 0))
