@@ -11,3 +11,4 @@ class MenuScene:
         self.background = pygame.transform.scale(
             pygame.image.load(ASSET_PATH + "home_background.png"), (WIDTH, HEIGHT)
         )
+        self.font = pygame.font.Font(None, TEXT_FONT_SIZE)
