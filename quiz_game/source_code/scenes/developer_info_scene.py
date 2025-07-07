@@ -9,6 +9,11 @@ class DeveloperInfoScene:
         self.screen = game.screen
         self.font = pygame.font.Font(None, TEXT_FONT_SIZE)
 
+    def handle_event(self, event):
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            from scenes.menu_scene import MenuScene
+            self.game.scene_manager.go_to(MenuScene(self.game))
+            
     def render(self):
         self.screen.fill((0, 0, 128))
         lines = [
