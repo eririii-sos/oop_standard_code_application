@@ -3,7 +3,7 @@
 import pygame
 from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE, TEXT_SPEED
 from core.utilities import fade_in
-from core.utilities import fade_in
+from core.music import play_music
 
 class HallwayScene:
     def __init__(self, game):
@@ -70,6 +70,9 @@ class HallwayScene:
         self.show_buttons = False
         self.yes_button = pygame.Rect(300, 500, 200, 50)
         self.no_button = pygame.Rect(550, 500, 200, 50)
+
+        # Insert hallway scene background music
+        play_music(ASSET_PATH + "hallway_bg_music.mp3")
 
         # Insert fade in transition
         fade_in(self.screen, self.background)
