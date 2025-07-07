@@ -38,3 +38,19 @@ class HallwayScene:
             10: self.char_expression_8,
             11: self.char_expression_9,
         }
+
+        # Monologue
+        self.monologue = [
+            "(Press SPACE to proceed)",
+            "OH",
+            "MY",
+            "GOOOOOOOOOOSH!",
+            "I completely forgot about our quiz today!",
+            "I wasn't able to study! What am I going to do?",
+            "...",
+            "...",
+            "...",
+            "hey, uh...",
+            "...will you help me?",
+            "PLEASEEEEEEEE :3",
+        ]
