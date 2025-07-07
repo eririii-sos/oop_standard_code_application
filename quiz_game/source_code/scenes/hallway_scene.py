@@ -64,3 +64,7 @@ class HallwayScene:
 
     def render(self):
         self.screen.blit(self.background, (0, 0))
+
+        # Draw the current character expression
+        expression_to_use = self.expression_map.get(self.current_line, self.char_expression_9)
+        self.screen.blit(expression_to_use, (WIDTH // 2 - 150, HEIGHT - 400))
