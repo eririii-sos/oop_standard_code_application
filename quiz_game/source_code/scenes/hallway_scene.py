@@ -90,3 +90,17 @@ class HallwayScene:
         for i, line in enumerate(wrapped):
             text_surface = self.font.render(line, True, (255, 255, 255))
             self.screen.blit(text_surface, (210, 510 + i * 28))
+
+    def wrap_text(self, text):
+        words = text.split(' ')
+        lines = []
+        line = ''
+        for word in words:
+            test_line = line + word + ' '
+            if self.font.size(test_line)[0] < 680:
+                line = test_line
+            else:
+                lines.append(line)
+                line = word + ' '
+        lines.append(line)
+        return lines
