@@ -61,3 +61,6 @@ class HallwayScene:
         self.typed_text = ""
         self.char_index = 0
         self.text_timer = 0
+
+    def render(self):
+        self.screen.blit(self.background, (0, 0))
