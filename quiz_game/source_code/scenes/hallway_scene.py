@@ -68,3 +68,9 @@ class HallwayScene:
         # Draw the current character expression
         expression_to_use = self.expression_map.get(self.current_line, self.char_expression_9)
         self.screen.blit(expression_to_use, (WIDTH // 2 - 150, HEIGHT - 400))
+
+        # Draw text box
+        box = pygame.Surface((700, 250))
+        box.set_alpha(180)
+        box.fill((0, 0, 0))
+        self.screen.blit(box, (200, 500))
