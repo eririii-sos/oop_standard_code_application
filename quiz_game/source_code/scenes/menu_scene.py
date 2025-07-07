@@ -16,6 +16,12 @@ class MenuScene:
         self.exit_button = pygame.Rect(395, 360, 280, 60)
         self.info_button = pygame.Rect(WIDTH - 60, HEIGHT - 60, 40, 40)
 
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            pos = pygame.mouse.get_pos()
+            if self.exit_button.collidepoint(pos):
+                self.game.running = False
+
     def update(self, dt):
         pass
 
