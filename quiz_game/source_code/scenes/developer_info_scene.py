@@ -13,7 +13,10 @@ class DeveloperInfoScene:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             from scenes.menu_scene import MenuScene
             self.game.scene_manager.go_to(MenuScene(self.game))
-            
+
+    def update(self, dt):
+        pass
+
     def render(self):
         self.screen.fill((0, 0, 128))
         lines = [
