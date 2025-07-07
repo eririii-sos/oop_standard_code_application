@@ -16,5 +16,8 @@ class MenuScene:
         self.exit_button = pygame.Rect(395, 360, 280, 60)
         self.info_button = pygame.Rect(WIDTH - 60, HEIGHT - 60, 40, 40)
 
+    def update(self, dt):
+        pass
+
     def render(self):
         self.screen.blit(self.background, (0, 0))
