@@ -3,6 +3,7 @@
 import pygame
 from settings import WIDTH, HEIGHT, TEXT_FONT_SIZE, ASSET_PATH
 from core.music import play_music
+from scenes.hallway_scene import HallwayScene
 from scenes.developer_info_scene import DeveloperInfoScene
 
 class MenuScene:
@@ -22,7 +23,9 @@ class MenuScene:
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             pos = pygame.mouse.get_pos()
-            if self.exit_button.collidepoint(pos):
+            if self.start_button.collidepoint(pos):
+                self.game.scene_manager.go_to(HallwayScene(self.game))
+            elif self.exit_button.collidepoint(pos):
                 self.game.running = False
             elif self.info_button.collidepoint(pos):
                 self.game.scene_manager.go_to(DeveloperInfoScene(self.game))
