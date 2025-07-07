@@ -57,3 +57,7 @@ class HallwayScene:
             "...will you help me?",
             "PLEASEEEEEEEE :3",
         ]
+        self.current_line = 0
+        self.typed_text = ""
+        self.char_index = 0
+        self.text_timer = 0
