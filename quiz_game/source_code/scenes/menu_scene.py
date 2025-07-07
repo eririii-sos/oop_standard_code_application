@@ -3,6 +3,7 @@
 import pygame
 from settings import WIDTH, HEIGHT, TEXT_FONT_SIZE, ASSET_PATH
 from core.music import play_music
+from scenes.developer_info_scene import DeveloperInfoScene
 
 class MenuScene:
     def __init__(self, game):
@@ -23,6 +24,8 @@ class MenuScene:
             pos = pygame.mouse.get_pos()
             if self.exit_button.collidepoint(pos):
                 self.game.running = False
+            elif self.info_button.collidepoint(pos):
+                self.game.scene_manager.go_to(DeveloperInfoScene(self.game))
 
     def update(self, dt):
         pass
