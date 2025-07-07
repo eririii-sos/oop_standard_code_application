@@ -86,20 +86,21 @@ class HallwayScene:
         expression_to_use = self.expression_map.get(self.current_line, self.char_expression_9)
         self.screen.blit(expression_to_use, (WIDTH // 2 - 150, HEIGHT - 400))
 
+        if not self.show_buttons:
         # Draw text box
-        box = pygame.Surface((700, 250))
-        box.set_alpha(180)
-        box.fill((0, 0, 0))
-        self.screen.blit(box, (200, 500))
+            box = pygame.Surface((700, 250))
+            box.set_alpha(180)
+            box.fill((0, 0, 0))
+            self.screen.blit(box, (200, 500))
 
-        # Draw character name above the box
-        self.screen.blit(self.character_name_display, (210, 475))    
+            # Draw character name above the box
+            self.screen.blit(self.character_name_display, (210, 475))    
 
-        # Draw monologue text
-        wrapped = self.wrap_text(self.typed_text)
-        for i, line in enumerate(wrapped):
-            text_surface = self.font.render(line, True, (255, 255, 255))
-            self.screen.blit(text_surface, (210, 510 + i * 28))
+            # Draw monologue text
+            wrapped = self.wrap_text(self.typed_text)
+            for i, line in enumerate(wrapped):
+                text_surface = self.font.render(line, True, (255, 255, 255))
+                self.screen.blit(text_surface, (210, 510 + i * 28))
 
     def wrap_text(self, text):
         words = text.split(' ')
