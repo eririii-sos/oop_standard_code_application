@@ -2,6 +2,7 @@
 
 import pygame
 from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE, TEXT_SPEED
+from core.utilities import fade_in
 
 class HallwayScene:
     def __init__(self, game):
@@ -68,6 +69,19 @@ class HallwayScene:
         self.show_buttons = False
         self.yes_button = pygame.Rect(300, 500, 200, 50)
         self.no_button = pygame.Rect(550, 500, 200, 50)
+
+        # Insert fade in transition
+        fade_in(self.screen, self.background)
+
+    def handle_event(self, event):
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            if self.current_line < len(self.monologue):
+                self.current_line += 1
+                self.typed_text = ""
+                self.char_index = 0
+                self.text_timer = 0
+            if self.current_line >= len(self.monologue):
+                self.show_buttons = True
 
     def update(self, dt):
         if self.current_line < len(self.monologue):
