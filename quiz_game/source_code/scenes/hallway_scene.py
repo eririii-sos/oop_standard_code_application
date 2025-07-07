@@ -42,6 +42,9 @@ class HallwayScene:
         # Set font
         self.font = pygame.font.Font(None, TEXT_FONT_SIZE)
 
+        # Character name display
+        self.character_name_display = self.font.render("Eri", True, (255, 255, 255))
+        
         # Monologue
         self.monologue = [
             "(Press SPACE to proceed)",
@@ -84,7 +87,10 @@ class HallwayScene:
         box.set_alpha(180)
         box.fill((0, 0, 0))
         self.screen.blit(box, (200, 500))
-                   
+
+        # Draw character name above the box
+        self.screen.blit(self.character_name_display, (210, 475))    
+
         # Draw monologue text
         wrapped = self.wrap_text(self.typed_text)
         for i, line in enumerate(wrapped):
