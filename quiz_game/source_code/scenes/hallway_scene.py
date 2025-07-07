@@ -84,6 +84,12 @@ class HallwayScene:
             if self.current_line >= len(self.monologue):
                 self.show_buttons = True
 
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and self.show_buttons:
+            pos = pygame.mouse.get_pos()
+            if self.no_button.collidepoint(pos):
+                from scenes.menu_scene import MenuScene
+                self.game.scene_manager.go_to(MenuScene(self.game))
+
     def update(self, dt):
         if self.current_line < len(self.monologue):
             line = self.monologue[self.current_line]
