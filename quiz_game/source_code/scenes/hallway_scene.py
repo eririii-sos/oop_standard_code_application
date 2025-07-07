@@ -44,7 +44,7 @@ class HallwayScene:
 
         # Character name display
         self.character_name_display = self.font.render("Eri", True, (255, 255, 255))
-        
+
         # Monologue
         self.monologue = [
             "(Press SPACE to proceed)",
@@ -64,6 +64,9 @@ class HallwayScene:
         self.typed_text = ""
         self.char_index = 0
         self.text_timer = 0
+
+        self.yes_button = pygame.Rect(300, 500, 200, 50)
+        self.no_button = pygame.Rect(550, 500, 200, 50)
 
     def update(self, dt):
         if self.current_line < len(self.monologue):
