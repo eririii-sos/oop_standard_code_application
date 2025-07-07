@@ -63,8 +63,8 @@ class HallwayScene:
         self.text_timer = 0
 
     def update(self, dt):
-        if self.current_line < len(self.dialogue):
-            line = self.dialogue[self.current_line]
+        if self.current_line < len(self.monologue):
+            line = self.monologue[self.current_line]
             if self.char_index < len(line):
                 self.text_timer += dt
                 if self.text_timer >= TEXT_SPEED:
