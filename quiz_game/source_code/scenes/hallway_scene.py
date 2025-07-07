@@ -102,6 +102,15 @@ class HallwayScene:
                 text_surface = self.font.render(line, True, (255, 255, 255))
                 self.screen.blit(text_surface, (210, 510 + i * 28))
 
+        # Draw Yes/No buttons
+        else:
+            pygame.draw.rect(self.screen, (0, 120, 0), self.yes_button)
+            pygame.draw.rect(self.screen, (120, 0, 0), self.no_button)
+            yes_text = self.font.render("Yes", True, (255, 255, 255))
+            no_text = self.font.render("No", True, (255, 255, 255))
+            self.screen.blit(yes_text, (self.yes_button.x + 75, self.yes_button.y + 15))
+            self.screen.blit(no_text, (self.no_button.x + 75, self.no_button.y + 15))
+
     def wrap_text(self, text):
         words = text.split(' ')
         lines = []
