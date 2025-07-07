@@ -3,6 +3,7 @@
 import pygame
 from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE, TEXT_SPEED
 from core.utilities import fade_in
+from core.utilities import fade_in
 
 class HallwayScene:
     def __init__(self, game):
