@@ -1,7 +1,7 @@
 # scenes/hallway_scene.py
 
 import pygame
-from settings import ASSET_PATH, WIDTH, HEIGHT
+from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE
 
 class HallwayScene:
     def __init__(self, game):
@@ -38,6 +38,9 @@ class HallwayScene:
             10: self.char_expression_8,
             11: self.char_expression_9,
         }
+
+        # Set font
+        self.font = pygame.font.Font(None, TEXT_FONT_SIZE)
 
         # Monologue
         self.monologue = [
