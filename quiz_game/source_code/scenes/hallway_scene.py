@@ -22,3 +22,19 @@ class HallwayScene:
         self.char_expression_7 = pygame.transform.scale(pygame.image.load(ASSET_PATH + "begging_face.png"), (300, 400))
         self.char_expression_8 = pygame.transform.scale(pygame.image.load(ASSET_PATH + "begging_face_2.png"), (300, 400))
         self.char_expression_9 = pygame.transform.scale(pygame.image.load(ASSET_PATH + "thinking_face.png"), (300, 400))
+
+        # Map expressions to dialogue lines
+        self.expression_map = {
+            0: self.char_expression_1,
+            1: self.char_expression_2,
+            2: self.char_expression_2,
+            3: self.char_expression_3,
+            4: self.char_expression_3,
+            5: self.char_expression_4,
+            6: self.char_expression_4,
+            7: self.char_expression_5,
+            8: self.char_expression_6,
+            9: self.char_expression_7,
+            10: self.char_expression_8,
+            11: self.char_expression_9,
+        }
