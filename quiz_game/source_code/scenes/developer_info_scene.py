@@ -8,3 +8,26 @@ class DeveloperInfoScene:
         self.game = game
         self.screen = game.screen
         self.font = pygame.font.Font(None, TEXT_FONT_SIZE)
+
+    def render(self):
+        self.screen.fill((0, 0, 128))
+        lines = [
+            "Quiz Day",
+            "",
+            "Developed by: Jacey Erin D. Concepcion",
+            "",
+            "GitHub: eririii-sos",
+            "https://github.com/eririii-sos/quiz_creator_program_2",
+            "",
+            "Special thanks to Prof. Danilo Madrigalajos!",
+            "",
+            "2025 | Made with Python and Pygame.",
+            "",
+            "[ Press ESC to return to Menu ]"
+        ]
+
+        y = 50
+        for line in lines:
+            text_surface = self.font.render(line, True, (255, 255, 255))
+            self.screen.blit(text_surface, (50, y))
+            y += 30
