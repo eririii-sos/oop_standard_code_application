@@ -84,3 +84,9 @@ class HallwayScene:
         box.set_alpha(180)
         box.fill((0, 0, 0))
         self.screen.blit(box, (200, 500))
+                   
+        # Draw monologue text
+        wrapped = self.wrap_text(self.typed_text)
+        for i, line in enumerate(wrapped):
+            text_surface = self.font.render(line, True, (255, 255, 255))
+            self.screen.blit(text_surface, (210, 510 + i * 28))
