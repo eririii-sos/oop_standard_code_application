@@ -65,6 +65,7 @@ class HallwayScene:
         self.char_index = 0
         self.text_timer = 0
 
+        self.show_buttons = False
         self.yes_button = pygame.Rect(300, 500, 200, 50)
         self.no_button = pygame.Rect(550, 500, 200, 50)
 
