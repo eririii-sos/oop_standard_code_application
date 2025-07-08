@@ -106,3 +106,10 @@ class QuizScene:
 
             text_surface = self.font.render(question_text, True, (0, 0, 0))
             self.screen.blit(text_surface, (WIDTH - 480, 130))
+
+            for i, option in enumerate(quiz["options"]):
+                if i >= len(self.option_boxes):
+                    break    
+                pygame.draw.rect(self.screen, (80, 180, 80), self.option_boxes[i])
+                option_text = self.font.render(option, True, (255, 255, 255))
+                self.screen.blit(option_text, (self.option_boxes[i].x + 20, self.option_boxes[i].y + 10))
