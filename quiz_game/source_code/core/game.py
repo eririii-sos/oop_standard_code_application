@@ -9,3 +9,4 @@ class Game:
         pygame.mixer.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Quiz Day")
+        self.clock = pygame.time.Clock()
