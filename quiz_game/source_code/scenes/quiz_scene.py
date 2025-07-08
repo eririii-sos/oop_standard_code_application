@@ -5,6 +5,7 @@ import random
 import os
 from settings import ASSET_PATH, QUIZ_FONT_SIZE, QUESTION_TIMER, WIDTH, HEIGHT
 from core.utilities import fade_in
+from scenes.result_scene import ResultScene
 
 QUIZ_FILE_PATH = os.path.join(ASSET_PATH, "quiz_creator_questions.txt")
 
@@ -94,11 +95,19 @@ class QuizScene:
             self.score += 1
 
         self.current_question += 1
+        if self.current_question >= len(self.questions):
+            self.game.scene_manager.go_to(ResultScene(self.game, self.score, len(self.questions)))
+        else:
+            self.timer = QUESTION_TIMER
 
     def update(self, dt):
         self.timer -= dt
         if self.timer <= 0:
             self.current_question += 1
+            if self.current_question >= len(self.questions):
+                self.game.scene_manager.go_to(ResultScene(self.game, self.score, len(self.questions)))
+            else:
+                self.timer = QUESTION_TIMER
 
     def render(self):
         self.screen.blit(self.background, (0, 0))
