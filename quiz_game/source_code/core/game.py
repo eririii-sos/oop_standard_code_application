@@ -1,7 +1,7 @@
 # core/game.py
 
 import pygame
-from settings import WIDTH, HEIGHT
+from settings import WIDTH, HEIGHT, FPS
 from core.scene_manager import SceneManager
 from scenes.menu_scene import MenuScene
 
@@ -15,3 +15,9 @@ class Game:
         self.running = True
 
         self.scene_manager = SceneManager(self.screen, MenuScene(self))
+
+    def run(self):
+        while self.running:
+            dt = self.clock.tick(FPS)
+
+            self.scene_manager.update(dt)
