@@ -2,6 +2,7 @@
 
 import pygame
 from settings import WIDTH, HEIGHT
+from core.scene_manager import SceneManager
 
 class Game:
     def __init__(self):
@@ -11,3 +12,5 @@ class Game:
         pygame.display.set_caption("Quiz Day")
         self.clock = pygame.time.Clock()
         self.running = True
+
+        self.scene_manager = SceneManager(self.screen)
