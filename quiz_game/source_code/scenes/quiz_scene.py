@@ -4,6 +4,7 @@ import pygame
 import random
 import os
 from settings import ASSET_PATH, QUIZ_FONT_SIZE, QUESTION_TIMER, WIDTH, HEIGHT
+from core.utilities import fade_in
 
 QUIZ_FILE_PATH = os.path.join(ASSET_PATH, "quiz_creator_questions.txt")
 
@@ -30,6 +31,8 @@ class QuizScene:
 
         self.timer = QUESTION_TIMER
         self.clock = pygame.time.Clock()
+
+        fade_in(self.screen, self.background)
 
     def load_questions(self):
         if not os.path.exists(QUIZ_FILE_PATH):
