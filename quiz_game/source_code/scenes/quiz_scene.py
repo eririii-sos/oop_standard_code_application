@@ -30,3 +30,8 @@ class QuizScene:
 
         self.timer = QUESTION_TIMER
         self.clock = pygame.time.Clock()
+
+    def load_questions(self):
+        if not os.path.exists(QUIZ_FILE_PATH):
+            print(f"Quiz file not found: {QUIZ_FILE_PATH}")
+            return []
