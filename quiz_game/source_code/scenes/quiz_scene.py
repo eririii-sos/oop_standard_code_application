@@ -113,3 +113,6 @@ class QuizScene:
                 pygame.draw.rect(self.screen, (80, 180, 80), self.option_boxes[i])
                 option_text = self.font.render(option, True, (255, 255, 255))
                 self.screen.blit(option_text, (self.option_boxes[i].x + 20, self.option_boxes[i].y + 10))
+
+            timer_surface = self.font.render(f"Time Left: {self.timer // 1000}s", True, (255, 0, 0))
+            self.screen.blit(timer_surface, (WIDTH - 800, 280))
