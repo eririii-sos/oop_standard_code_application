@@ -47,3 +47,6 @@ class ResultScene:
 
     def update(self, dt):
         pass
+
+    def render(self):
+        self.screen.blit(self.background, (0, 0))
