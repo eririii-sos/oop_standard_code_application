@@ -23,3 +23,9 @@ class ResultScene:
         self.poor_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "poor_mark.png"), (300, 150))
         self.passed_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "passed_mark.png"), (300, 150))
         self.perfect_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "perfect_mark.png"), (300, 150))
+
+        # Load expressions
+        self.failed_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "failed_face.png"), (300, 300))
+        self.poor_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "average_face.png"), (300, 300))
+        self.passed_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "passed_face.png"), (300, 300))
+        self.happy_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "happy_face.png"), (300, 300))
