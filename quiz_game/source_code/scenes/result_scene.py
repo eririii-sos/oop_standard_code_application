@@ -50,3 +50,8 @@ class ResultScene:
 
     def render(self):
         self.screen.blit(self.background, (0, 0))
+
+        # Draw result text
+        result_text = f"You got {self.user_score}/{self.total_questions} correct!"
+        result_surface = self.title_font.render(result_text, True, (12, 0, 0))
+        self.screen.blit(result_surface, (WIDTH - 490, 220))
