@@ -68,3 +68,10 @@ class QuizScene:
                 print(f"Skipped malformed question block:\n{block}\n")
 
         return questions
+    
+    def generate_option_boxes(self):
+        self.option_boxes.clear()
+        y_start = 180
+        for i in range(4):
+            box = pygame.Rect(580, y_start + i * 70, 250, 50)
+            self.option_boxes.append(box)
