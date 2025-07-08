@@ -2,6 +2,7 @@
 
 import pygame
 from settings import QUIZ_FONT_SIZE, ASSET_PATH, WIDTH, HEIGHT
+from core.utilities import fade_in
 
 class ResultScene:
     def __init__(self, game, user_score, total_questions):
@@ -31,6 +32,9 @@ class ResultScene:
         self.happy_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "happy_face.png"), (300, 300))
 
         self.exit_button_rect = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 230, 200, 50)
+
+        # Fade in
+        fade_in(self.screen, self.background)
 
     def handle_event(self, event):
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
