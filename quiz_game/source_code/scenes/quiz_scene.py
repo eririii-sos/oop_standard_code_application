@@ -35,3 +35,36 @@ class QuizScene:
         if not os.path.exists(QUIZ_FILE_PATH):
             print(f"Quiz file not found: {QUIZ_FILE_PATH}")
             return []
+        
+        with open(QUIZ_FILE_PATH, 'r') as file:
+            content = file.read().strip()
+
+        raw_blocks = content.split("--------------------------------------------------")
+        questions = []
+
+        for block in raw_blocks:
+            lines = block.strip().splitlines()
+            if not lines:
+                continue
+
+            q_data = {
+                "question": "",
+                "options": [],
+                "answer": ""
+            }
+
+            for line in lines:
+                line = line.strip()
+                if line.startswith("Question:"):
+                    q_data["question"] = line.replace("Question:", "").strip()
+                elif line.startswith(("a)", "b)", "c)", "d)")):
+                    q_data["options"].append(line)
+                elif line.startswith("Correct Answer:"):
+                    q_data["answer"] = line[-1].lower()
+
+            if len(q_data["options"]) == 4 and q_data["answer"] in ['a', 'b', 'c', 'd']:
+                questions.append(q_data)
+            else:
+                print(f"Skipped malformed question block:\n{block}\n")
+
+        return questions
