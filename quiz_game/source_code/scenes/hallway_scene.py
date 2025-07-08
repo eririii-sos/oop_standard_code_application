@@ -3,6 +3,7 @@
 import pygame
 from settings import ASSET_PATH, WIDTH, HEIGHT, TEXT_FONT_SIZE, TEXT_SPEED
 from core.utilities import fade_in
+from scenes.quiz_scene import QuizScene
 from core.music import play_music
 
 class HallwayScene:
@@ -92,6 +93,8 @@ class HallwayScene:
             if self.no_button.collidepoint(pos):
                 from scenes.menu_scene import MenuScene
                 self.game.scene_manager.go_to(MenuScene(self.game))
+            elif self.yes_button.collidepoint(pos):
+                self.game.scene_manager.go_to(QuizScene(self.game))
 
     def update(self, dt):
         if self.current_line < len(self.monologue):
