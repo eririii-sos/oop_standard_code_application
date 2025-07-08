@@ -19,5 +19,10 @@ class Game:
     def run(self):
         while self.running:
             dt = self.clock.tick(FPS)
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.running = False
+                else:
+                    self.scene_manager.handle_event(event)
 
             self.scene_manager.update(dt)
