@@ -55,3 +55,9 @@ class ResultScene:
         result_text = f"You got {self.user_score}/{self.total_questions} correct!"
         result_surface = self.title_font.render(result_text, True, (12, 0, 0))
         self.screen.blit(result_surface, (WIDTH - 490, 220))
+
+        # Decide which mark and expression to show
+        mark_image, char_expression = self.get_result_assets()
+
+        self.screen.blit(mark_image, (WIDTH - 500, 230))
+        self.screen.blit(char_expression, (WIDTH - 880, 130))
