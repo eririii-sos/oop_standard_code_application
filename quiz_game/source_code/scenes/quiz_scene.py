@@ -18,4 +18,6 @@ class QuizScene:
         )
 
         self.questions = self.load_questions()
+        if not self.questions:
+            print("ERROR: No quiz questions loaded!")        
         random.shuffle(self.questions)
