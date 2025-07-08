@@ -82,3 +82,10 @@ class QuizScene:
             for i, box in enumerate(self.option_boxes):
                 if box.collidepoint(pos):
                     self.check_answer(i)
+
+    def check_answer(self, selected_index):
+        quiz = self.questions[self.current_question]
+        correct_index = ord(quiz["answer"]) - ord('a')
+
+        if selected_index == correct_index:
+            self.score += 1
