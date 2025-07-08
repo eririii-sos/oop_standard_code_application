@@ -96,3 +96,6 @@ class QuizScene:
         self.timer -= dt
         if self.timer <= 0:
             self.current_question += 1
+
+    def render(self):
+        self.screen.blit(self.background, (0, 0))
