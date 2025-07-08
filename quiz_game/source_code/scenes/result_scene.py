@@ -31,3 +31,12 @@ class ResultScene:
         self.happy_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "happy_face.png"), (300, 300))
 
         self.exit_button_rect = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 230, 200, 50)
+
+    def handle_event(self, event):
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            from scenes.menu_scene import MenuScene
+            self.game.scene_manager.go_to(MenuScene(self.game))
+        elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            if self.exit_button_rect.collidepoint(pygame.mouse.get_pos()):
+                from scenes.menu_scene import MenuScene
+                self.game.scene_manager.go_to(MenuScene(self.game))
