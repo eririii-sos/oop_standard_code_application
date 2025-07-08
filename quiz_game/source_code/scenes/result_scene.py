@@ -61,3 +61,14 @@ class ResultScene:
 
         self.screen.blit(mark_image, (WIDTH - 500, 230))
         self.screen.blit(char_expression, (WIDTH - 880, 130))
+
+
+    def get_result_assets(self):
+        if self.user_score == 0:
+            return self.failed_mark, self.failed_expression
+        elif self.user_score < self.total_questions // 2:
+            return self.poor_mark, self.poor_expression
+        elif self.user_score < self.total_questions:
+            return self.passed_mark, self.passed_expression
+        else:
+            return self.perfect_mark, self.happy_expression
