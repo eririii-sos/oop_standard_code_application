@@ -26,3 +26,5 @@ class Game:
                     self.scene_manager.handle_event(event)
 
             self.scene_manager.update(dt)
+            self.scene_manager.render()
+            pygame.display.flip()
