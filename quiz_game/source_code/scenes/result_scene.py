@@ -62,6 +62,10 @@ class ResultScene:
         self.screen.blit(mark_image, (WIDTH - 500, 230))
         self.screen.blit(char_expression, (WIDTH - 880, 130))
 
+        # Draw Exit button
+        pygame.draw.rect(self.screen, (255, 0, 0), self.exit_button_rect)
+        exit_text = self.font.render("Press Esc to Exit", True, (255, 255, 255))
+        self.screen.blit(exit_text, (self.exit_button_rect.x + 20, self.exit_button_rect.y + 15))
 
     def get_result_assets(self):
         if self.user_score == 0:
