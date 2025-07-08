@@ -29,3 +29,5 @@ class ResultScene:
         self.poor_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "average_face.png"), (300, 300))
         self.passed_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "passed_face.png"), (300, 300))
         self.happy_expression = pygame.transform.scale(pygame.image.load(ASSET_PATH + "happy_face.png"), (300, 300))
+
+        self.exit_button_rect = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 230, 200, 50)
