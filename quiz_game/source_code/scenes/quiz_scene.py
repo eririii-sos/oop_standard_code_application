@@ -75,3 +75,10 @@ class QuizScene:
         for i in range(4):
             box = pygame.Rect(580, y_start + i * 70, 250, 50)
             self.option_boxes.append(box)
+
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            pos = pygame.mouse.get_pos()
+            for i, box in enumerate(self.option_boxes):
+                if box.collidepoint(pos):
+                    self.check_answer(i)
