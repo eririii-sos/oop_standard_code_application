@@ -1,6 +1,7 @@
 # scenes/quiz_scene.py
 
 import pygame
+import random
 import os
 from settings import ASSET_PATH, QUIZ_FONT_SIZE, WIDTH, HEIGHT
 
@@ -17,3 +18,4 @@ class QuizScene:
         )
 
         self.questions = self.load_questions()
+        random.shuffle(self.questions)
