@@ -89,3 +89,5 @@ class QuizScene:
 
         if selected_index == correct_index:
             self.score += 1
+
+        self.current_question += 1
