@@ -10,3 +10,4 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Quiz Day")
         self.clock = pygame.time.Clock()
+        self.running = True
