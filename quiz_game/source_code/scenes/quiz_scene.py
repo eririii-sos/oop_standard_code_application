@@ -15,3 +15,5 @@ class QuizScene:
         self.background = pygame.transform.scale(
             pygame.image.load(ASSET_PATH + "quiz_background.png"), (WIDTH, HEIGHT)
         )
+
+        self.questions = self.load_questions()
