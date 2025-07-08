@@ -91,3 +91,8 @@ class QuizScene:
             self.score += 1
 
         self.current_question += 1
+
+    def update(self, dt):
+        self.timer -= dt
+        if self.timer <= 0:
+            self.current_question += 1
