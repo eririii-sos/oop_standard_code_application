@@ -21,3 +21,9 @@ class QuizScene:
         if not self.questions:
             print("ERROR: No quiz questions loaded!")        
         random.shuffle(self.questions)
+
+        self.current_question = 0
+        self.score = 0
+
+        self.option_boxes = []
+        self.generate_option_boxes()
