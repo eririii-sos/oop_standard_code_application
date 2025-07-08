@@ -1,7 +1,7 @@
 # scenes/result_scene.py
 
 import pygame
-from settings import QUIZ_FONT_SIZE
+from settings import QUIZ_FONT_SIZE, ASSET_PATH, WIDTH, HEIGHT
 
 class ResultScene:
     def __init__(self, game, user_score, total_questions):
@@ -12,3 +12,8 @@ class ResultScene:
 
         self.user_score = user_score
         self.total_questions = total_questions
+
+        # Load background
+        self.background = pygame.transform.scale(
+            pygame.image.load(ASSET_PATH + "quiz_background.png"), (WIDTH, HEIGHT)
+        )
