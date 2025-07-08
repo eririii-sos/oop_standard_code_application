@@ -99,3 +99,10 @@ class QuizScene:
 
     def render(self):
         self.screen.blit(self.background, (0, 0))
+
+        if self.current_question < len(self.questions):
+            quiz = self.questions[self.current_question]
+            question_text = quiz["question"]
+
+            text_surface = self.font.render(question_text, True, (0, 0, 0))
+            self.screen.blit(text_surface, (WIDTH - 480, 130))
