@@ -17,3 +17,9 @@ class ResultScene:
         self.background = pygame.transform.scale(
             pygame.image.load(ASSET_PATH + "quiz_background.png"), (WIDTH, HEIGHT)
         )
+
+        # Load mark images
+        self.failed_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "failed_mark.png"), (300, 150))
+        self.poor_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "poor_mark.png"), (300, 150))
+        self.passed_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "passed_mark.png"), (300, 150))
+        self.perfect_mark = pygame.transform.scale(pygame.image.load(ASSET_PATH + "perfect_mark.png"), (300, 150))
