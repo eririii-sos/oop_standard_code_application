@@ -3,7 +3,7 @@
 import pygame
 import random
 import os
-from settings import ASSET_PATH, QUIZ_FONT_SIZE, WIDTH, HEIGHT
+from settings import ASSET_PATH, QUIZ_FONT_SIZE, QUESTION_TIMER, WIDTH, HEIGHT
 
 QUIZ_FILE_PATH = os.path.join(ASSET_PATH, "quiz_creator_questions.txt")
 
@@ -27,3 +27,6 @@ class QuizScene:
 
         self.option_boxes = []
         self.generate_option_boxes()
+
+        self.timer = QUESTION_TIMER
+        self.clock = pygame.time.Clock()
