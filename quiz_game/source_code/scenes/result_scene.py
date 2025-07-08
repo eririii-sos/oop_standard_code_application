@@ -44,3 +44,6 @@ class ResultScene:
             if self.exit_button_rect.collidepoint(pygame.mouse.get_pos()):
                 from scenes.menu_scene import MenuScene
                 self.game.scene_manager.go_to(MenuScene(self.game))
+
+    def update(self, dt):
+        pass
